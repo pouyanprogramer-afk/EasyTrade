@@ -12,7 +12,6 @@ def opening_browser():
         context = playwright.chromium.launch_persistent_context(
             user_data_dir=str(profile_path),
             headless = False,
-            viewport={"width": 900, "height": 650},
                   )
        
         page = context.pages[0] if context.pages else context.new_page()
